@@ -1,0 +1,219 @@
+<android.support.constraint.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/baseLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/basketList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:clipToPadding="false"
+
+        android:divider="@android:color/transparent"
+        android:dividerHeight="24dp"
+
+        android:paddingTop="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/couponLabel"
+        app:layout_constraintEnd_toEndOf="@id/right_margin"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@id/left_margin"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+        <android.support.constraint.Guideline
+            android:id="@+id/left_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/right_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/bottom_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/btn_layout"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="@drawable/square_btn_active"
+            app:layout_constraintBottom_toBottomOf="@id/bottom_margin"
+            app:layout_constraintEnd_toStartOf="@id/btn_right_margin"
+            app:layout_constraintStart_toStartOf="@id/btn_left_margin">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/sendLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/send"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/amountTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="8dp"
+                android:text="0 Kr"
+                android:textAlignment="textEnd"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintStart_toEndOf="@+id/sendLabel"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/btn_top_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.68" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/btn_left_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/btn_right_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <EditText
+            android:id="@+id/tableNoTv"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:inputType="number"
+            android:singleLine="true"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_layout"
+            app:layout_constraintStart_toEndOf="@+id/TableNoLabel" />
+
+        <EditText
+            android:id="@+id/discountTv"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:inputType="number"
+            android:singleLine="true"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/tableNoTv"
+            app:layout_constraintStart_toEndOf="@+id/discountLabel" />
+
+        <TextView
+            android:id="@+id/TableNoLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/table_number"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tableNoTv"
+            app:layout_constraintStart_toStartOf="@+id/left_margin"
+            app:layout_constraintTop_toTopOf="@+id/tableNoTv" />
+
+        <TextView
+            android:id="@+id/discountLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/discount"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/discountTv"
+            app:layout_constraintStart_toStartOf="@+id/left_margin"
+            app:layout_constraintTop_toTopOf="@+id/discountTv" />
+
+        <TextView
+            android:id="@+id/couponLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/coupon"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/discountLabel"
+            app:layout_constraintStart_toEndOf="@+id/discountTv" />
+
+    <TextView
+        android:id="@+id/VAT_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/vat"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toEndOf="@+id/discountTv"
+        app:layout_constraintTop_toTopOf="@+id/TableNoLabel" />
+
+    <TextView
+        android:id="@+id/vat_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="0 Kr"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toEndOf="@+id/VAT_label"
+        app:layout_constraintTop_toTopOf="@+id/TableNoLabel" />
+
+    <EditText
+            android:id="@+id/coupon_discount_field"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/discountTv"
+            app:layout_constraintEnd_toStartOf="@+id/right_margin"
+            app:layout_constraintStart_toEndOf="@+id/couponLabel" />
+
+    <CheckBox
+        android:id="@+id/payNowCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/pay_now"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/coupon_discount_field"
+        app:layout_constraintTop_toTopOf="@+id/tableNoTv" />
+
+    </android.support.constraint.ConstraintLayout>

@@ -1,0 +1,104 @@
+<resources>
+  <string name="app_name">MPOS Test</string>
+  <string name="app_name_dev">MPOS Test</string>
+  <string name="home_name">Hem</string>
+  <string name="trans_name">Betalning</string>
+  <string name="card_name">Kort Info</string>
+  <string name="orderList_name">Beställningar</string>
+  <string name="itemsScreen_name">Skapa</string>
+  <string name="historyScreen_name">Historik</string>
+  <string name="settings_name">Inställningar</string>
+  <string name="reports_name">Rapporter</string>
+  <string name="basket">Korg</string>
+
+  <string name="navigation_drawer_open">Open navigation drawer</string>
+  <string name="navigation_drawer_close">Close navigation drawer</string>
+
+  <!-- Strings for login screen -->
+  <string name="login_name">Namn</string>
+  <string name="login_password">Lösenord</string>
+  <string name="login_btnText">Logga in</string>
+
+  <!-- Strings for home screen -->
+  <string name="card_info_btn_text">Kort Info</string>
+  <string name="history_btn_text">Historik</string>
+  <string name="transaction_btn_text">Betalning</string>
+  <string name="create_order_btn_text">Skapa</string>
+  <string name="total_sales">Total Försäljning</string>
+  <string name="num_receipts">Antal Kvitton</string>
+  <string name="user_name_label">Användarnamn</string>
+
+  <!-- Strings for Transaction History Screen -->
+  <string name ="transaction_history">Betalningshistorik</string>
+  <string name="search_for_order_no">Sök efter Order Nr</string>
+
+  <!-- Strings for Payment Screen -->
+  <string name="enter_sum">Skriv in Summa</string>
+  <string name="confirm">Bekräfta</string>
+
+  <!-- Strings for Order List screen -->
+  <string name="order_no">Order Nr.</string>
+  <string name="pending">Väntande</string>
+  <string name="completed">Färdig</string>
+  <string name="delivered">Levererad</string>
+  <string name="canceled">Avbruten</string>
+  <string name="andmore"> ... med mera </string>
+
+  <!-- Strings for Basket Screen -->
+  <string name="send">Skicka</string>
+  <string name="discount">Rabatt %:</string>
+  <string name="coupon">Kupong:</string>
+  <string name="table_number">Bords Nr:</string>
+  <string name="pay_now">Betala Nu?</string>
+
+  <!-- Strings for payment options screen -->
+  <string name="payment_options_title">Betalningsalternativ</string>
+
+  <string name="payOption_Qpay">Qpay Credits</string>
+
+  <string name="payOption_swish">Swish</string>
+  <string name="payDesc_swish">Betala med Swish</string>
+
+  <string name="payOption_credit">Kreditbetalning</string>
+  <string name="payDesc_credit">Betala med Kreditkort</string>
+
+  <string name="payOption_cash">Kontantbetalning</string>
+  <string name="payDesc_cash">Betala med Kontanter</string>
+
+  <string name="payOption_later">Betala vid leverans</string>
+  <string name="payDesc_later">Betala för beställningen vid leverans</string>
+
+  <string name="sorry_title">Ledsen</string>
+  <string name="OK">OK</string>
+  <string name="cart_empty">Din korg är tom.</string>
+
+  <string name="profile_title">Profil</string>
+
+  <!-- Strings for menu -->
+  <string name="log_out">Logga Ut</string>
+  <string name="reports">Rapporter X och Z</string>
+  <string name="x_report">Rapport X</string>
+  <string name="z_report">Rapport Z</string>
+
+  <!-- Strings for Settings Screen -->
+  <string name="language">Språk</string>
+  <string name="enter_id">Skriv in ID</string>
+  <string name="register_credit_card">Registrera Kort</string>
+
+  <!-- Strings for card register screen -->
+  <string name="card_register_title">Bambora Kortregistrering</string>
+
+  <string name="swedish">Svenska</string>
+  <string name="english">Engelska</string>
+  <string name="apply">Verkställ</string>
+  <string name="search">sök</string>
+
+  <string name="ok">OK</string>
+  <string name="no_pay_options">Inga Betalningsalternativ Tillgängliga!</string>
+
+  <string name="new_order_single">Ny Beställning!</string>
+  <string name="new_order_plural">Nya Beställningar!</string>
+
+  <string name="no_orders_found_fetch_more">Inga Beställningar hittades! Tryck här för att hämta flera.</string>
+
+</resources>

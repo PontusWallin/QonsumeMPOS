@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/btn_bg">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/transaction_btn_text"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="12sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/content_bottom_margin"
+        app:layout_constraintEnd_toStartOf="@+id/content_right_margin"
+        app:layout_constraintStart_toStartOf="@+id/content_left_margin"
+        app:layout_constraintTop_toTopOf="@+id/top_text" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/content_bottom_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/content_bottom_margin" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/content_left_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/content_left_margin"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/content_right_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/content_right_margin"/>
+
+    <ImageView
+        android:id="@+id/icon_imageview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/content_right_margin"
+        app:layout_constraintStart_toEndOf="@+id/content_left_margin"
+        app:layout_constraintTop_toTopOf="@+id/top_margin"
+        app:srcCompat="@drawable/transaction" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/top_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/content_top_margin" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/top_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.65" />
+</android.support.constraint.ConstraintLayout>

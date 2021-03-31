@@ -1,0 +1,383 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/userNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_background"
+        android:gravity="center"
+        android:paddingEnd="@dimen/text_field_horizontal_padding"
+        android:paddingStart="@dimen/text_field_horizontal_padding"
+        android:text="User Name"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/user_name_bottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/totalSalesLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_background"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/list_margin_right"
+        app:layout_constraintStart_toStartOf="@+id/list_margin_left"
+        app:layout_constraintTop_toBottomOf="@+id/shopNameFieldLayout">
+
+
+        <TextView
+            android:id="@+id/salesLabel"
+            android:layout_width="190dp"
+            android:layout_height="50dp"
+
+            android:layout_marginStart="25dp"
+            android:gravity="center"
+            android:text="@string/total_sales"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/shopNameField" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="10dp"
+            android:layout_height="50dp"
+            android:layout_weight="0"
+            android:text=":"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/salesNumberTv"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="0"
+            android:gravity="center"
+            android:paddingRight="8dp"
+            android:text="0"
+            android:textAlignment="textEnd"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/numberOfRecepitsLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_background"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/list_margin_right"
+        app:layout_constraintStart_toStartOf="@+id/list_margin_left"
+        app:layout_constraintTop_toBottomOf="@+id/totalSalesLayout">
+
+        <TextView
+            android:id="@+id/receiptsLabel"
+            android:layout_width="190dp"
+            android:layout_height="50dp"
+
+            android:layout_marginStart="25dp"
+            android:gravity="center"
+            android:text="@string/num_receipts"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/shopNameField" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="10dp"
+            android:layout_height="50dp"
+            android:layout_weight="0"
+            android:text=":"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/receiptsNumberTv"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="0"
+            android:gravity="center"
+            android:paddingRight="8dp"
+            android:text="0"
+            android:layout_marginRight="16dp"
+            android:textAlignment="textEnd"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/shopNameFieldLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/list_margin_right"
+        app:layout_constraintStart_toStartOf="@+id/list_margin_left"
+        app:layout_constraintTop_toTopOf="@+id/topMargin">
+
+        <TextView
+            android:id="@+id/shopNameField"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/header_background"
+            android:gravity="center"
+            android:paddingStart="@dimen/text_field_horizontal_padding"
+            android:paddingEnd="@dimen/text_field_horizontal_padding"
+            android:text="Tasty Food Restaurant"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="@+id/top_margin_full_layout" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/userNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/user_name_label"
+        android:textColor="#929396"
+        app:layout_constraintBottom_toTopOf="@+id/userNameTextView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/card_info_btn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/second_level_start"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/left_btn_right_margin"
+        app:layout_constraintStart_toStartOf="@+id/second_level_left_margin"
+        app:layout_constraintTop_toTopOf="@+id/third_level_start">
+
+        <include
+            android:id="@+id/card_info_btn_content"
+            layout="@layout/btn_layout_card_info" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/create_order_btn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/third_level_start"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/top_level_right_margin"
+        app:layout_constraintStart_toStartOf="@+id/top_right_btn_left_margin"
+        app:layout_constraintTop_toTopOf="@+id/top_margin_top_level">
+
+        <include
+            android:id="@+id/create_btn_content"
+            layout="@layout/btn_layout_create" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/order_list_btn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/first_level_bottom_margin"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/first_level_right_margin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/first_level_left_margin"
+        app:layout_constraintTop_toTopOf="@+id/first_level_top">
+
+        <include
+            android:id="@+id/order_list_btn_content"
+            layout="@layout/btn_layout_order_list" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/history_btn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/second_level_start"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/second_level_right_margin"
+        app:layout_constraintStart_toStartOf="@+id/right_btn_left_margin"
+        app:layout_constraintTop_toTopOf="@+id/third_level_start">
+
+        <include
+            android:id="@+id/tr_btn_history"
+            layout="@layout/btn_layout_history" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/transaction_btn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/third_level_start"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/top_left_btn_right_margin"
+        app:layout_constraintStart_toStartOf="@+id/top_level_margin_left"
+        app:layout_constraintTop_toTopOf="@+id/top_margin_top_level">
+
+        <include
+            android:id="@+id/tr_btn_content"
+            layout="@layout/btn_layout_transaction" />
+
+    </FrameLayout>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/second_level_left_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/second_level_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/left_btn_right_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.32" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/third_level_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/top_level_margin_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.18" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/top_margin_top_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/top_left_btn_right_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.48" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/top_right_btn_left_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.52" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/second_level_right_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/right_btn_left_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.68" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/top_level_right_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.82" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/first_level_bottom_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1.0" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/first_level_left_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/first_level_right_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/first_level_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/user_name_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/top_margin_full_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/list_margin_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/list_margin_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/topMargin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.03" />
+
+
+</android.support.constraint.ConstraintLayout>

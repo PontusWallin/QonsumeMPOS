@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.AppCompatTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/textView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+    android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+    android:text="my placeholder text"
+    android:textAppearance="?android:attr/textAppearanceListItemSmall"
+    android:textSize="16sp"
+    app:autoSizeMinTextSize="12sp"
+    app:autoSizeMaxTextSize="100sp"
+    app:autoSizeTextType="uniform" />

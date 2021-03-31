@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/baseLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/userNameBG"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_alignBottom="@+id/passwordBG"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_background"
+        android:contentDescription="username field"
+        app:layout_constraintBottom_toTopOf="@+id/passwordEditView"
+        app:layout_constraintEnd_toStartOf="@+id/margin_right"
+        app:layout_constraintStart_toStartOf="@+id/margin_left" />
+
+    <ImageView
+        android:id="@+id/passwordBG"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/userNameBG"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rounded_background"
+        android:contentDescription="password field"
+        app:layout_constraintBottom_toTopOf="@+id/midpoint"
+        app:layout_constraintEnd_toStartOf="@+id/margin_right"
+        app:layout_constraintStart_toStartOf="@+id/margin_left" />
+
+    <EditText
+        android:id="@+id/userNameEditView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignBottom="@+id/userNameBG"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:fontFamily="serif"
+        android:hint="@string/login_name"
+        android:inputType="text"
+        android:singleLine="false"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/userNameBG"
+        app:layout_constraintEnd_toEndOf="@+id/userNameBG"
+        app:layout_constraintStart_toStartOf="@+id/userNameBG"
+        app:layout_constraintTop_toBottomOf="@+id/userNameBG"
+        app:layout_constraintTop_toTopOf="@id/userNameBG" />
+
+    <EditText
+        android:id="@+id/passwordEditView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_above="@+id/btn_login_content"
+        android:layout_alignStart="@+id/userNameEditView"
+        android:background="@android:color/transparent"
+        android:fontFamily="serif"
+        android:hint="@string/login_password"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/midpoint"
+        app:layout_constraintEnd_toEndOf="@+id/passwordBG"
+        app:layout_constraintStart_toStartOf="@+id/passwordBG"
+        app:layout_constraintTop_toTopOf="@+id/passwordBG" />
+
+    <!-- <Button
+        android:id="@+id/login_btn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/userNameBG"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/login_btn"
+
+        android:text="@string/login_btnText"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+
+        app:layout_constraintBottom_toTopOf="@+id/bottom_margin"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/btn_right"
+        app:layout_constraintStart_toStartOf="@+id/btn_left"
+        app:layout_constraintTop_toTopOf="@+id/btn_top" /> -->
+
+    <FrameLayout
+        android:id="@+id/login_btn_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_margin"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/btn_right"
+        app:layout_constraintStart_toStartOf="@+id/btn_left"
+
+        app:layout_constraintTop_toTopOf="@+id/btn_top">
+
+        <include
+            android:id="@+id/btn_login_content"
+            layout="@layout/btn_layout_login" />
+
+    </FrameLayout>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/bottom_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/btn_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/btn_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/btn_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/midpoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/margin_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/margin_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+</android.support.constraint.ConstraintLayout>
